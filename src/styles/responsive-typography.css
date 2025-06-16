@@ -42,7 +42,7 @@
   /* Titres principaux */
   .font-title, .heading-display, .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6, .responsive-title {
     font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif !important;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: var(--letter-spacing-tight);
   }
 
