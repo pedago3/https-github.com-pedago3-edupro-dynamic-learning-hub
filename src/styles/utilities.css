@@ -1,0 +1,93 @@
+
+@layer utilities {
+  /* Responsive Grid Variables */
+  :root {
+    --grid-gap: 1rem;
+    --flex-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --grid-gap: 1.5rem;
+      --flex-gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --grid-gap: 2rem;
+      --flex-gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --grid-gap: 2.5rem;
+      --flex-gap: 2.5rem;
+    }
+  }
+
+  /* Adaptive Container Utilities */
+  .adaptive-container {
+    @apply w-full max-w-7xl mx-auto px-4;
+  }
+
+  @media (min-width: 640px) {
+    .adaptive-container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .adaptive-container {
+      @apply px-8;
+    }
+  }
+
+  /* Responsive Text Sizes - Mise à jour avec les nouvelles classes */
+  .responsive-heading {
+    @apply heading-h2;
+  }
+
+  .responsive-subheading {
+    @apply heading-h4;
+  }
+
+  /* Responsive Layout Utilities */
+  .responsive-grid {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .responsive-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .responsive-flex {
+    display: flex;
+    gap: var(--flex-gap);
+    flex-direction: column;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-flex {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

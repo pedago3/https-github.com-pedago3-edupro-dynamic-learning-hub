@@ -1,0 +1,71 @@
+
+@layer utilities {
+  /* Classes utilitaires pour le responsive */
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .auto-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .auto-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+  }
+
+  .auto-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .auto-flex > * {
+    flex: 1 1 280px;
+    min-width: 0;
+  }
+
+  @media (min-width: 768px) {
+    .auto-flex {
+      gap: 1.5rem;
+    }
+    .auto-flex > * {
+      flex: 1 1 300px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .auto-flex {
+      gap: 2rem;
+    }
+    .auto-flex > * {
+      flex: 1 1 320px;
+    }
+  }
+
+  /* Classes pour l'espacement fluide */
+  .fluid-spacing-y {
+    margin-top: clamp(1rem, 4vw, 3rem);
+    margin-bottom: clamp(1rem, 4vw, 3rem);
+  }
+
+  .fluid-spacing-x {
+    margin-left: clamp(1rem, 4vw, 3rem);
+    margin-right: clamp(1rem, 4vw, 3rem);
+  }
+
+  .fluid-padding {
+    padding: clamp(1rem, 4vw, 3rem);
+  }
+
+  .fluid-gap {
+    gap: clamp(0.5rem, 2vw, 2rem);
+  }
+}

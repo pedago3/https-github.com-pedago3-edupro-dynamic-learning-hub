@@ -1,0 +1,42 @@
+
+@import url("./styles/base.css");
+@import url("./styles/utilities.css");
+@import url("./styles/animations.css");
+@import url("./styles/effects.css");
+@import url("./styles/responsive-typography.css");
+@import url("./styles/responsive-media.css");
+@import url("./styles/responsive-interactions.css");
+@import url("./styles/responsive-accessibility.css");
+@import url("./styles/flexible-variables.css");
+@import url("./styles/flexible-grid.css");
+@import url("./styles/flexible-container.css");
+@import url("./styles/flexible-utilities.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Classes pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible pour la navigation clavier */
+.using-keyboard *:focus {
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Amélioration du contraste pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --focus-ring-color: #60a5fa;
+  }
+}

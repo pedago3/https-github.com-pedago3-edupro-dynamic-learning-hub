@@ -1,0 +1,109 @@
+
+@layer utilities {
+  /* Optimisations tactiles */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* Zones tactiles étendues */
+  .touch-area {
+    position: relative;
+  }
+
+  .touch-area::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+  }
+
+  /* États hover/focus adaptatifs */
+  @media (hover: hover) {
+    .adaptive-hover:hover {
+      background-color: var(--hover-bg, rgba(0, 0, 0, 0.05));
+    }
+  }
+
+  @media (hover: none) {
+    .adaptive-hover:active {
+      background-color: var(--active-bg, rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  /* Transitions optimisées pour mobile */
+  @media (max-width: 768px) {
+    .mobile-smooth {
+      transition-duration: 0.2s;
+    }
+  }
+
+  /* Masquage conditionnel par breakpoint */
+  .hide-mobile {
+    @apply block;
+  }
+
+  .hide-tablet {
+    @apply block;
+  }
+
+  .hide-desktop {
+    @apply block;
+  }
+
+  @media (max-width: 640px) {
+    .hide-mobile {
+      @apply hidden;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .hide-tablet {
+      @apply hidden;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hide-desktop {
+      @apply hidden;
+    }
+  }
+
+  /* Affichage conditionnel par breakpoint */
+  .show-mobile {
+    @apply hidden;
+  }
+
+  .show-tablet {
+    @apply hidden;
+  }
+
+  .show-desktop {
+    @apply hidden;
+  }
+
+  @media (max-width: 640px) {
+    .show-mobile {
+      @apply block;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .show-tablet {
+      @apply block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .show-desktop {
+      @apply block;
+    }
+  }
+}

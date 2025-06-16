@@ -1,0 +1,55 @@
+
+@layer utilities {
+  /* Styles pour FlexibleContainer */
+  .flexible-container {
+    padding-left: var(--padding-mobile, 1rem);
+    padding-right: var(--padding-mobile, 1rem);
+    transition: padding 0.3s ease;
+  }
+
+  /* Styles pour FlexibleSection */
+  .flexible-section {
+    padding-top: var(--spacing-mobile, 2rem);
+    padding-bottom: var(--spacing-mobile, 2rem);
+    transition: padding 0.3s ease;
+  }
+
+  /* Media queries pour tablettes */
+  @media (min-width: 768px) {
+    .flexible-container {
+      padding-left: var(--padding-tablet, 1.5rem);
+      padding-right: var(--padding-tablet, 1.5rem);
+    }
+
+    .flexible-section {
+      padding-top: var(--spacing-tablet, 3rem);
+      padding-bottom: var(--spacing-tablet, 3rem);
+    }
+  }
+
+  /* Media queries pour desktop */
+  @media (min-width: 1024px) {
+    .flexible-container {
+      padding-left: var(--padding-desktop, 2rem);
+      padding-right: var(--padding-desktop, 2rem);
+    }
+
+    .flexible-section {
+      padding-top: var(--spacing-desktop, 4rem);
+      padding-bottom: var(--spacing-desktop, 4rem);
+    }
+  }
+
+  /* Media queries pour écrans XL */
+  @media (min-width: 1280px) {
+    .flexible-container {
+      padding-left: var(--padding-xl, 2rem);
+      padding-right: var(--padding-xl, 2rem);
+    }
+
+    .flexible-section {
+      padding-top: var(--spacing-xl, 5rem);
+      padding-bottom: var(--spacing-xl, 5rem);
+    }
+  }
+}
